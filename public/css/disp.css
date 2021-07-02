@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  font-weight: 600;
+  color: white;
+  background-color: #0e0e0e;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0e0e;
+  width: 60vw;
+}
+
+.content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.content-container h3 {
+  font-size: 1.5rem;
+}
+
+.content-container a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.fa {
+  font-size: 1.2rem;
+}
+
+.atag {
+  text-align: end;
+}
+
+.content-container .headings ul {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+
+.content-container .headings ul .item {
+  text-align: center;
+  list-style: none;
+}
+.box {
+  border-radius: 1.1rem;
+  margin: 1.1rem;
+  padding-left: 1.1rem;
+  background-color: #292929;
+}
+
+.box ul {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  margin: 0;
+  padding: 1.1rem 0;
+}
+
+.box ul li {
+  text-align: center;
+}
+
+.box-in ul {
+  display: grid;
+  grid-template-columns: 0.1fr 0.4fr 0.1fr 0.1fr 0.1fr 0.1fr;
+  padding-top: 1.1rem;
+}
+
+.box-in ul a {
+  font-size: 1.1rem;
+}
+
+.content-container ul .inp {
+  /* text-align: start; */
+  list-style: none;
+}
+canc {
+  padding: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+ul {
+  width: 100%;
+}
+.box-in {
+  width: 100%;
+  background-color: #292929;
+  border-radius: 1.1rem;
+  margin: 1.1rem;
+  padding-left: 1.1rem;
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    width: 100vw;
+  }
+}

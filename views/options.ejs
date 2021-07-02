@@ -1,0 +1,66 @@
+<html>
+<head>
+<script src="https://kit.fontawesome.com/9efb7992b6.js" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link href="/intro.css" rel="stylesheet" />
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <title> Automation</title>
+
+<body>
+
+<div class="content">
+	<div class="container">
+		<div class="header">
+			<h3 align="center"> FINMAN</h3>
+			<h3 align="center">Automating Financial Tasks</h3>
+			
+			
+		</div>
+		<div id="mycards" class="d-md-flex mt-5 justify-content-center">
+			<div class="card m-3 py-3">
+			  <div class="card-body">
+				<h4 class="card-title fw-bold">Invoice reminders</h4>
+				<p class="card-text py-1">
+				  Have a client who owes payment? Finman allows you to create
+				  automated email reminders for them to avoid having you compost
+				  reminders.
+				</p>
+				<a href="/invoice/<%=username%>" class="btn btn-outline-primary">Try it</a>
+			  </div>
+			</div>
+			<div class="card m-3 py-3">
+			  <div class="card-body">
+				<h4 class="card-title fw-bold">Payroll</h4>
+				<p class="card-text py-1">
+				  Finman can easily automate payrolls. All that time spent on manual
+				  data entry, verification, and cross-verification can be put to
+				  better use by choosing automated payroll processing
+				</p>
+				<a href="/payroll/<%=username%>" class="btn btn-outline-primary">Try it</a>
+			  </div>
+			</div>
+			<div class="card m-3 py-3">
+			  <div class="card-body">
+				<h4 class="card-title fw-bold">Paying bills</h4>
+				<p class="card-text py-1">
+				  Coordinating with your bank to set up automatic payments is an easy
+				  way to ensure your office has electricity without needing to write
+				  out checks every mont. Finman does it all for you.
+				</p>
+				<a href="/bill/<%=username%>" class="btn btn-outline-primary">Try it</a>
+			  </div>
+			</div>
+		  </div>
+	</div>
+</div>
+
+</body>
+</html>

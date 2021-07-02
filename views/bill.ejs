@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/disp.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3c2af0c8a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Bill Display</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-container">
+        <h1>Bills</h1>
+        <div class="atag">
+          <a href="/createBill/<%=username%>"
+            ><i class="fa fa-plus-circle"></i> new employee</a
+          >
+        </div>
+        <% if(billArr.length !== 0){ %> <% for(var i=billArr.length-1; i>=0;
+        i--) { %>
+
+        <div class="box-in">
+          <ul>
+            <li class="inp"><%=billArr[i].billType%></li>
+            <li class="inp"><%=billArr[i].amount%></li>
+            <li class="inp" id="<%=billArr[i].name%>">
+              <%=billArr[i].Status%>
+            </li>
+            <li class="inp">
+              <%=new Date(billArr[i].date).getDate()%>/<%=new
+              Date(billArr[i].date).getMonth()%>/<%=new
+              Date(billArr[i].date).getFullYear()%>
+            </li>
+            <li class="inp">
+              <button
+                type="button"
+                class="btn btn-secondary canc"
+                data-dismiss="modal"
+                id="Cancel"
+                onclick="cancel(event);"
+                data-post-uname="<%=username%>"
+                data-post-name="<%=billArr[i].name%>"
+              >
+                Cancel
+              </button>
+            </li>
+            <li class="inp">
+              <button
+                type="button"
+                class="btn btn-primary done"
+                id="Done"
+                data-dismiss="modal"
+                onclick="done(event)"
+                data-post-uname="<%=username%>"
+                data-post-name="<%=billArr[i].name%>"
+              >
+                Done
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <%}%> <%}%>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/billi.js"></script>
+    <!-- <script src="index.js"></script> -->
+  </body>
+</html>
