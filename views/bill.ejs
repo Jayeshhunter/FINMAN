@@ -39,7 +39,7 @@
           <ul>
             <li class="inp"><%=billArr[i].billType%></li>
             <li class="inp"><%=billArr[i].amount%></li>
-            <li class="inp" id="<%=billArr[i].name%>">
+            <li class="inp" id="<%=billArr[i].billType%>">
               <%=billArr[i].Status%>
             </li>
             <li class="inp">
@@ -55,7 +55,7 @@
                 id="Cancel"
                 onclick="cancel(event);"
                 data-post-uname="<%=username%>"
-                data-post-name="<%=billArr[i].name%>"
+                data-post-name="<%=billArr[i].billType%>"
               >
                 Cancel
               </button>
@@ -68,7 +68,7 @@
                 data-dismiss="modal"
                 onclick="done(event)"
                 data-post-uname="<%=username%>"
-                data-post-name="<%=billArr[i].name%>"
+                data-post-name="<%=billArr[i].billType%>"
               >
                 Done
               </button>

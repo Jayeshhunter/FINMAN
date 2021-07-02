@@ -86,13 +86,13 @@ module.exports.createInv_post = (req, res) => {
             let transporter = nodemailer.createTransport({
               service: "gmail",
               auth: {
-                user: "", // generated ethereal user
-                pass: "", // generated ethereal password
+                user: "jj6144@srmist.edu.in", // generated ethereal user
+                pass: "SRMworld$2468", // generated ethereal password
               },
             });
 
             let info = await transporter.sendMail({
-              from: "", // sender address
+              from: "jj6144@srmist.edu.in", // sender address
               to: email, // list of receivers
               subject: "F I N M A N", // Subject line
               text: `Greetings, participant!
