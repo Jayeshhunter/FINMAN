@@ -39,7 +39,28 @@
           <ul>
             <li class="inp"><%=payArr[i].name%></li>
             <li class="inp"><%=payArr[i].amount%></li>
-            <li class="inp" id="<%=payArr[i].name%>"><%=payArr[i].Status%></li>
+
+            <%if(payArr[i].Status === "Cancelled"){%>
+            <li
+              class="inp"
+              style="color: rgb(219, 92, 92)"
+              id="<%=payArr[i].name%>"
+            >
+              <%=payArr[i].Status%>
+            </li>
+            <%}%> <%if(payArr[i].Status === "Done"){%>
+            <li class="inp" style="color: greenyellow" id="<%=payArr[i].name%>">
+              <%=payArr[i].Status%>
+            </li>
+            <%}%> <%if(payArr[i].Status === "pending"){%>
+            <li class="inp" style="color: yellow" id="<%=payArr[i].name%>">
+              <%=payArr[i].Status%>
+            </li>
+            <%}%> <%if(payArr[i].Status === "Delayed"){%>
+            <li class="inp" style="color: Red" id="<%=payArr[i].name%>">
+              <%=payArr[i].Status%>
+            </li>
+            <%}%>
             <li class="inp">
               <%=new Date(payArr[i].date).getDate()%>/<%=new
               Date(payArr[i].date).getMonth()%>/<%=new

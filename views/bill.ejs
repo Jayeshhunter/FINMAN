@@ -39,9 +39,34 @@
           <ul>
             <li class="inp"><%=billArr[i].billType%></li>
             <li class="inp"><%=billArr[i].amount%></li>
-            <li class="inp" id="<%=billArr[i].billType%>">
+            <!-- <li class="inp" id="<%=billArr[i].billType%>">
+              <%=billArr[i].Status%>
+            </li> -->
+            <%if(billArr[i].Status === "Cancelled"){%>
+            <li
+              class="inp"
+              style="color: rgb(219, 92, 92)"
+              id="<%=billArr[i].billType%>"
+            >
               <%=billArr[i].Status%>
             </li>
+            <%}%> <%if(billArr[i].Status === "Done"){%>
+            <li
+              class="inp"
+              style="color: greenyellow"
+              id="<%=billArr[i].billType%>"
+            >
+              <%=billArr[i].Status%>
+            </li>
+            <%}%> <%if(billArr[i].Status === "pending"){%>
+            <li class="inp" style="color: yellow" id="<%=billArr[i].billType%>">
+              <%=billArr[i].Status%>
+            </li>
+            <%}%> <%if(billArr[i].Status === "Delayed"){%>
+            <li class="inp" style="color: Red" id="<%=billArr[i].billType%>">
+              <%=billArr[i].Status%>
+            </li>
+            <%}%>
             <li class="inp">
               <%=new Date(billArr[i].date).getDate()%>/<%=new
               Date(billArr[i].date).getMonth()%>/<%=new
